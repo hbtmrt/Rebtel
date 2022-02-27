@@ -24,6 +24,7 @@ namespace RebtelTest.Service.Helpers
             List<int> bookIds = this.dbContext.UserBorrowedBooks
                 .GroupBy(ubb => ubb.BookId)
                 .Select(ubb => new KeyValuePair<int, int>(ubb.Key, ubb.Count()))
+                .ToList()
                 .Where(kv => kv.Value > Constants.MostBorrowedBooksThreshold)
                 .OrderByDescending(kv => kv.Value)
                 .Select(kv => kv.Key)
