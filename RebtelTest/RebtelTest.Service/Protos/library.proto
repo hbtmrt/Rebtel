@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "RebtelTest.Service.Protos";
+
+service LibraryManager
+{
+    rpc GetMostBorrowedBooks (GetMostBorrowedBooksRequest) returns(Books);
+}
+
+message GetMostBorrowedBooksRequest {}
+
+message Book {
+  string name = 1;
+}
+
+message Books {
+  repeated Book bookList =1;
+}
