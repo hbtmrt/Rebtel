@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RebtelTest.Data;
 
 namespace RebtelTest.Data.Migrations
 {
     [DbContext(typeof(LibraryContext))]
-    partial class LibraryContextModelSnapshot : ModelSnapshot
+    [Migration("20220228030023_ModifiedBooksColumns")]
+    partial class ModifiedBooksColumns
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,134 +46,134 @@ namespace RebtelTest.Data.Migrations
                         {
                             Id = 1,
                             Name = "My Book 1",
-                            NoOfBorrowedBooks = 41,
-                            NoOfCopyBooks = 60
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 2,
                             Name = "My Book 2",
-                            NoOfBorrowedBooks = 23,
-                            NoOfCopyBooks = 94
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 3,
                             Name = "My Book 3",
-                            NoOfBorrowedBooks = 6,
-                            NoOfCopyBooks = 87
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 4,
                             Name = "My Book 4",
-                            NoOfBorrowedBooks = 20,
-                            NoOfCopyBooks = 82
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 5,
                             Name = "My Book 5",
-                            NoOfBorrowedBooks = 23,
-                            NoOfCopyBooks = 94
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 6,
                             Name = "My Book 6",
-                            NoOfBorrowedBooks = 13,
-                            NoOfCopyBooks = 69
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 7,
                             Name = "My Book 7",
-                            NoOfBorrowedBooks = 47,
-                            NoOfCopyBooks = 96
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 8,
                             Name = "My Book 8",
-                            NoOfBorrowedBooks = 17,
-                            NoOfCopyBooks = 68
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 9,
                             Name = "My Book 9",
-                            NoOfBorrowedBooks = 17,
-                            NoOfCopyBooks = 64
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 10,
                             Name = "My Book 10",
-                            NoOfBorrowedBooks = 10,
-                            NoOfCopyBooks = 76
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 11,
                             Name = "My Book 11",
-                            NoOfBorrowedBooks = 24,
-                            NoOfCopyBooks = 95
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 12,
                             Name = "My Book 12",
-                            NoOfBorrowedBooks = 45,
-                            NoOfCopyBooks = 76
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 13,
                             Name = "My Book 13",
-                            NoOfBorrowedBooks = 29,
-                            NoOfCopyBooks = 58
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 14,
                             Name = "My Book 14",
-                            NoOfBorrowedBooks = 7,
-                            NoOfCopyBooks = 90
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 15,
                             Name = "My Book 15",
-                            NoOfBorrowedBooks = 28,
-                            NoOfCopyBooks = 53
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 16,
                             Name = "My Book 16",
-                            NoOfBorrowedBooks = 39,
-                            NoOfCopyBooks = 98
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 17,
                             Name = "My Book 17",
-                            NoOfBorrowedBooks = 12,
-                            NoOfCopyBooks = 93
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 18,
                             Name = "My Book 18",
-                            NoOfBorrowedBooks = 43,
-                            NoOfCopyBooks = 81
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         },
                         new
                         {
                             Id = 19,
                             Name = "My Book 19",
-                            NoOfBorrowedBooks = 39,
-                            NoOfCopyBooks = 88
+                            NoOfBorrowedBooks = 0,
+                            NoOfCopyBooks = 0
                         });
                 });
 
@@ -324,36 +326,35 @@ namespace RebtelTest.Data.Migrations
                         new
                         {
                             Id = 1,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 9, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
+                            UserId = 17
                         },
                         new
                         {
                             Id = 2,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 11, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 11, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
+                            IsCopy = true,
+                            UserId = 4
                         },
                         new
                         {
                             Id = 3,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 9, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 8, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 19
+                            UserId = 11
                         },
                         new
                         {
                             Id = 4,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 12, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 12, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 12
@@ -361,901 +362,174 @@ namespace RebtelTest.Data.Migrations
                         new
                         {
                             Id = 5,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 3, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 6,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 2, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 8, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 19
                         },
                         new
                         {
-                            Id = 7,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 11, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 6,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 5, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 7,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 9
                         },
                         new
                         {
                             Id = 8,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
-                            UserId = 12
+                            UserId = 18
                         },
                         new
                         {
                             Id = 9,
                             BookId = 4,
-                            BorrowedDate = new DateTime(2021, 2, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 11, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
+                            IsCopy = true,
+                            UserId = 18
                         },
                         new
                         {
                             Id = 10,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 5, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 9
+                            UserId = 19
                         },
                         new
                         {
                             Id = 11,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 10, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 7, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
+                            UserId = 3
                         },
                         new
                         {
                             Id = 12,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 9, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 9
+                            ReturnDate = new DateTime(2022, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
                         },
                         new
                         {
                             Id = 13,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 1, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
                         },
                         new
                         {
                             Id = 14,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
                         },
                         new
                         {
                             Id = 15,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 16,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 8, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 17,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 6, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 18,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 7, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 2
                         },
                         new
                         {
-                            Id = 19,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 16,
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 9, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 17,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 8, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 18,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 8, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 19
+                            UserId = 9
+                        },
+                        new
+                        {
+                            Id = 19,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 10, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 9
                         },
                         new
                         {
                             Id = 20,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 8, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
+                            IsCopy = true,
+                            UserId = 14
                         },
                         new
                         {
                             Id = 21,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 12, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 4, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
-                            UserId = 8
+                            ReturnDate = new DateTime(2022, 2, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
                         },
                         new
                         {
                             Id = 22,
                             BookId = 10,
-                            BorrowedDate = new DateTime(2021, 3, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
+                            IsCopy = false,
+                            UserId = 17
                         },
                         new
                         {
                             Id = 23,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 24,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 9, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 25,
                             BookId = 13,
-                            BorrowedDate = new DateTime(2021, 4, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 26,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 27,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 8, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 28,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 29,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 11, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 30,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 10, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 31,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 32,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 9, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 33,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 34,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 10, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 35,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 9, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 36,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 37,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 38,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 39,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 40,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 41,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 4, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 42,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 43,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 12, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 44,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 45,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 46,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 47,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 9, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 48,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
-                        },
-                        new
-                        {
-                            Id = 49,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 12, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 50,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 51,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 8, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 52,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 11, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 53,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 54,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 8, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 55,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 10, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 56,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 8, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 57,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 4, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 58,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 3, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 59,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 60,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 6, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 61,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 62,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 63,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 9, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 64,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 10, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 65,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 66,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 67,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 68,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 11, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 69,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 9, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 70,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 10, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 71,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 72,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 73,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 9, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 74,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 3, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 75,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 76,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 5, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 77,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 8, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 78,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 79,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 3, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 80,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 81,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 12, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 82,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
-                        },
-                        new
-                        {
-                            Id = 83,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 8, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 84,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 9, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 85,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 5, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 86,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 8, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 87,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 4, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 88,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 89,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 5, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 90,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 91,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 12, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 92,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 8, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 93,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 3, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 94,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 95,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 96,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 12, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 97,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 4, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 98,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 11, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 99,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 12, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 100,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 101,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 5, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 102,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 1, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 103,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             ReturnDate = new DateTime(2022, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -1263,37 +537,37 @@ namespace RebtelTest.Data.Migrations
                         },
                         new
                         {
-                            Id = 104,
+                            Id = 24,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 10, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 25,
                             BookId = 12,
-                            BorrowedDate = new DateTime(2021, 4, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 7
+                            ReturnDate = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
                         },
                         new
                         {
-                            Id = 105,
+                            Id = 26,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 9, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 27,
                             BookId = 4,
-                            BorrowedDate = new DateTime(2021, 8, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 106,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 107,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 12, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             ReturnDate = new DateTime(2022, 2, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -1301,73 +575,802 @@ namespace RebtelTest.Data.Migrations
                         },
                         new
                         {
-                            Id = 108,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 11, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 28,
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 5, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 18
                         },
                         new
                         {
-                            Id = 109,
+                            Id = 29,
                             BookId = 9,
-                            BorrowedDate = new DateTime(2021, 8, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 4, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 1
+                            ReturnDate = new DateTime(2022, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
                         },
                         new
                         {
-                            Id = 110,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 9, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 30,
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 1, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
-                            UserId = 8
+                            UserId = 2
                         },
                         new
                         {
-                            Id = 111,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 112,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 10, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 113,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 4, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 114,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 5, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 31,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 11, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 3
                         },
                         new
                         {
-                            Id = 115,
+                            Id = 32,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 33,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 9
+                        },
+                        new
+                        {
+                            Id = 34,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 12, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 35,
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 8, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 36,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 12, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 37,
                             BookId = 10,
-                            BorrowedDate = new DateTime(2021, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 38,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 12, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 39,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 11, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 40,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 41,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 2, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 42,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 43,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 8, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 44,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 45,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 13
+                        },
+                        new
+                        {
+                            Id = 46,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 1, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 47,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 48,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 3, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 49,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 50,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 3, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 9
+                        },
+                        new
+                        {
+                            Id = 51,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 11, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 52,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 53,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 54,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 7, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 55,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 12, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 56,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 8, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 57,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 58,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 11, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 13
+                        },
+                        new
+                        {
+                            Id = 59,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 1, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 60,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 11, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 61,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 12, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 62,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 63,
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 64,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 6, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 65,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 66,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 8, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 67,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 68,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 1, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 69,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 10, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 70,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 71,
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 7, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 72,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 11, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 73,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 8, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 74,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 12, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 75,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 12, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 76,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 10, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 77,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 12, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 78,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 79,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 80,
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 5, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 81,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 82,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 83,
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 84,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 5, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 85,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 86,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 7, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 87,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 88,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 89,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 2, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 90,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 7, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 91,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 92,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 2, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 93,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 8, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 94,
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 5, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 95,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 96,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 3, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 97,
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 98,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 2, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 99,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 12, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 100,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 10, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 101,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 7, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 102,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 12, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 103,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 9
+                        },
+                        new
+                        {
+                            Id = 104,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 4, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 105,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 7, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 106,
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 2, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 107,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 9
+                        },
+                        new
+                        {
+                            Id = 108,
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 109,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 110,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 11, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 111,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 11, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 112,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 3, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 113,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 6, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 114,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 4, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 115,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 9, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 18
@@ -1375,62 +1378,63 @@ namespace RebtelTest.Data.Migrations
                         new
                         {
                             Id = 116,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 117,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 7, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 118,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 119,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 3, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 7, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 14
                         },
                         new
                         {
-                            Id = 120,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 117,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 3, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 9
+                            ReturnDate = new DateTime(2022, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 118,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 3, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 119,
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 120,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 4, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
                         },
                         new
                         {
                             Id = 121,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 12, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 7, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
+                            IsCopy = true,
+                            UserId = 12
                         },
                         new
                         {
                             Id = 122,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 11, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 13
@@ -1438,89 +1442,92 @@ namespace RebtelTest.Data.Migrations
                         new
                         {
                             Id = 123,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 11, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
+                            IsCopy = true,
+                            UserId = 12
                         },
                         new
                         {
                             Id = 124,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 6, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 125,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 7, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 1
                         },
                         new
                         {
-                            Id = 126,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 11, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 127,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 128,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 11, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 129,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 130,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 5, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 125,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 6, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 9
                         },
                         new
                         {
-                            Id = 131,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 126,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 9, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 127,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 128,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
-                            UserId = 2
+                            ReturnDate = new DateTime(2022, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 129,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 130,
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 131,
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 8, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
                         },
                         new
                         {
                             Id = 132,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 5, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 11, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 18
@@ -1528,109 +1535,107 @@ namespace RebtelTest.Data.Migrations
                         new
                         {
                             Id = 133,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 11, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 3
+                            UserId = 1
                         },
                         new
                         {
                             Id = 134,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 135,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 11, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 136,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 7, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 137,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 4, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 138,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 8, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 139,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 8, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 140,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 141,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 7
                         },
                         new
                         {
-                            Id = 142,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 8, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 135,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 136,
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 7, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 137,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 9, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
-                            UserId = 18
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 138,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 10, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 139,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 11, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 140,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 2, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 141,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 7, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 142,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 4, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
                         },
                         new
                         {
                             Id = 143,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 10, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 7, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
+                            IsCopy = false,
+                            UserId = 9
                         },
                         new
                         {
                             Id = 144,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 10, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 3
@@ -1638,238 +1643,238 @@ namespace RebtelTest.Data.Migrations
                         new
                         {
                             Id = 145,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 146,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 11, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 147,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 12, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
-                        },
-                        new
-                        {
-                            Id = 148,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 4, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 149,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 7, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 4
                         },
                         new
                         {
-                            Id = 150,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 12, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 151,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 152,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 153,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 154,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 7, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 155,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 4, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 146,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 19
                         },
                         new
                         {
-                            Id = 156,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 157,
+                            Id = 147,
                             BookId = 5,
-                            BorrowedDate = new DateTime(2021, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 158,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 9, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 10, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ReturnDate = new DateTime(2022, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserId = 5
                         },
                         new
                         {
-                            Id = 159,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 148,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 1
+                            UserId = 9
                         },
                         new
                         {
-                            Id = 160,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 2, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 161,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 162,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 163,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 10, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 164,
+                            Id = 149,
                             BookId = 10,
-                            BorrowedDate = new DateTime(2021, 10, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 7, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
+                            IsCopy = true,
+                            UserId = 6
                         },
                         new
                         {
-                            Id = 165,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 1, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 150,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 12, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 151,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 152,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 12, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 13
                         },
                         new
                         {
-                            Id = 166,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 9, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 153,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 6, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
+                            IsCopy = true,
+                            UserId = 8
                         },
                         new
                         {
-                            Id = 167,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 7, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 154,
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 155,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserId = 15
                         },
                         new
                         {
-                            Id = 168,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 10, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 156,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 157,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 158,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 17
                         },
                         new
                         {
-                            Id = 169,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 11, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 159,
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 7, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 160,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 161,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 162,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 10, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 163,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 13
+                        },
+                        new
+                        {
+                            Id = 164,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 165,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 9, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 166,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 167,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 12, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 168,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 1, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 169,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 13
                         },
                         new
                         {
                             Id = 170,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 19
@@ -1877,72 +1882,92 @@ namespace RebtelTest.Data.Migrations
                         new
                         {
                             Id = 171,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
+                            IsCopy = true,
+                            UserId = 16
                         },
                         new
                         {
                             Id = 172,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
+                            IsCopy = true,
+                            UserId = 8
                         },
                         new
                         {
                             Id = 173,
                             BookId = 7,
-                            BorrowedDate = new DateTime(2021, 10, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 174,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 7, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 175,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 7, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 176,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 177,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 12, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 19
                         },
                         new
                         {
+                            Id = 174,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 11, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 175,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 4, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 176,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 3, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 177,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 1, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
                             Id = 178,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 12, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 179,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 3, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 2, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 180,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             ReturnDate = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -1950,137 +1975,119 @@ namespace RebtelTest.Data.Migrations
                         },
                         new
                         {
-                            Id = 179,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 180,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 7, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 181,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 2, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 11
                         },
                         new
                         {
-                            Id = 181,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 7, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
                             Id = 182,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 3, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 183,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 184,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 4, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 185,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 12, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 6
                         },
                         new
                         {
-                            Id = 186,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 9, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 187,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 188,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 6, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 189,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 6, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 183,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 7, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 12
                         },
                         new
                         {
-                            Id = 190,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 3, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 184,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 9, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 3
+                            UserId = 13
+                        },
+                        new
+                        {
+                            Id = 185,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 5, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 186,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 8, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 187,
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 13
+                        },
+                        new
+                        {
+                            Id = 188,
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 6, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 2, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 189,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 11, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 190,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
                         },
                         new
                         {
                             Id = 191,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 10, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 3, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ReturnDate = new DateTime(2022, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserId = 5
                         },
                         new
                         {
                             Id = 192,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 2, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 3, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
+                            IsCopy = false,
+                            UserId = 19
                         },
                         new
                         {
                             Id = 193,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 13
@@ -2089,16 +2096,16 @@ namespace RebtelTest.Data.Migrations
                         {
                             Id = 194,
                             BookId = 18,
-                            BorrowedDate = new DateTime(2021, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 3, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
+                            IsCopy = true,
+                            UserId = 2
                         },
                         new
                         {
                             Id = 195,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 4, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 17
@@ -2106,245 +2113,248 @@ namespace RebtelTest.Data.Migrations
                         new
                         {
                             Id = 196,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 7, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
+                            IsCopy = false,
+                            UserId = 7
                         },
                         new
                         {
                             Id = 197,
                             BookId = 3,
-                            BorrowedDate = new DateTime(2021, 11, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 6, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 13
+                            UserId = 17
                         },
                         new
                         {
                             Id = 198,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 199,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 200,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 8, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 201,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 202,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 9, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 203,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 9, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 204,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 4, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 205,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 206,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 207,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 208,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 12, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
-                        },
-                        new
-                        {
-                            Id = 209,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 210,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 2, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 211,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 212,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 12, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 213,
                             BookId = 6,
                             BorrowedDate = new DateTime(2021, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 214,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 10, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 215,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 3, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 216,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 217,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 10, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 218,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 2, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 219,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 1
                         },
                         new
                         {
-                            Id = 220,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 4, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 199,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 10, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 200,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ReturnDate = new DateTime(2022, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 201,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 202,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 203,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 10, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 204,
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 3, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 205,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserId = 5
                         },
                         new
                         {
-                            Id = 221,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 11, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 206,
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 7, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 207,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 208,
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 2, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 209,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 11, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 210,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 4, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 211,
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 13
+                        },
+                        new
+                        {
+                            Id = 212,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 8, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 213,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 10, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 214,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 215,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 10, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 216,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 10, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 14
                         },
                         new
                         {
+                            Id = 217,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 4, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 218,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 9, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 219,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 220,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 9, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 221,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
                             Id = 222,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 8, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 3
@@ -2353,180 +2363,300 @@ namespace RebtelTest.Data.Migrations
                         {
                             Id = 223,
                             BookId = 1,
-                            BorrowedDate = new DateTime(2021, 7, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ReturnDate = new DateTime(2022, 2, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserId = 15
                         },
                         new
                         {
                             Id = 224,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 11, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 11, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
-                            UserId = 16
+                            UserId = 4
                         },
                         new
                         {
                             Id = 225,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 12, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
                         },
                         new
                         {
                             Id = 226,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 4, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 227,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 228,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 229,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 4, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 230,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 10, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 231,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 9, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 232,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 5, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 233,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 3, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 234,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 235,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 12, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 236,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 6, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 237,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 5, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 238,
                             BookId = 7,
-                            BorrowedDate = new DateTime(2021, 4, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 239,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 10, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 240,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 7, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 241,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 10, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 6
                         },
                         new
                         {
-                            Id = 242,
+                            Id = 227,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 10, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 228,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 4, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 229,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 230,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 9, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 231,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 9, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 9
+                        },
+                        new
+                        {
+                            Id = 232,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 5, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 233,
                             BookId = 2,
-                            BorrowedDate = new DateTime(2021, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 234,
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 4, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 235,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 12, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 236,
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 237,
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 238,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 10, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 239,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 13
+                        },
+                        new
+                        {
+                            Id = 240,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 3, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 241,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 10, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 13
+                        },
+                        new
+                        {
+                            Id = 242,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 11, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 243,
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 244,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 5, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 245,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 12, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 246,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 9, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 247,
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 12, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 248,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 2, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 249,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 11, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 250,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 9, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 251,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 3, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 252,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 12, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 13
+                        },
+                        new
+                        {
+                            Id = 253,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 4, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 254,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 255,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             ReturnDate = new DateTime(2022, 2, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -2534,376 +2664,255 @@ namespace RebtelTest.Data.Migrations
                         },
                         new
                         {
-                            Id = 243,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 1, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 244,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 4, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 245,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 9, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 246,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 247,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 248,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 4, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 249,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 250,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 251,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 252,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 4, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 253,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 8, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 254,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 255,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
                             Id = 256,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 257,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 10, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 258,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 8, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 259,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 260,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 261,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 262,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 12, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 3, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 18
                         },
                         new
                         {
-                            Id = 263,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 10, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 264,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 11, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 265,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 4, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 266,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 257,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 7, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
-                            UserId = 6
+                            UserId = 8
                         },
                         new
                         {
-                            Id = 267,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 258,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 2, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 268,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 269,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 4, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 270,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 11, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 271,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ReturnDate = new DateTime(2022, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserId = 5
                         },
                         new
                         {
-                            Id = 272,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 1, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 273,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 274,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 7, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 275,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 276,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 6, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 277,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 278,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 9, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 279,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 3, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 280,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 7, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 281,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 10, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 259,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 12, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 12
                         },
                         new
                         {
-                            Id = 282,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 260,
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 5, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 261,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 262,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 12, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 263,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 12, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 264,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 11, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 265,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 266,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 4, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 267,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 11, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 268,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 269,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 3, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 270,
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 271,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 3, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 272,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 10, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 273,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 4, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserId = 10
                         },
                         new
                         {
-                            Id = 283,
+                            Id = 274,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 275,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 11, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 276,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 277,
                             BookId = 2,
-                            BorrowedDate = new DateTime(2021, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 7, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 278,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 7, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 279,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 280,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 3, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 281,
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 282,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 283,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 10, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 2
@@ -2912,16 +2921,16 @@ namespace RebtelTest.Data.Migrations
                         {
                             Id = 284,
                             BookId = 19,
-                            BorrowedDate = new DateTime(2021, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 4, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 17
+                            UserId = 11
                         },
                         new
                         {
                             Id = 285,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 4, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 13
@@ -2929,53 +2938,53 @@ namespace RebtelTest.Data.Migrations
                         new
                         {
                             Id = 286,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 9, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 17
+                            UserId = 11
                         },
                         new
                         {
                             Id = 287,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 8, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 288,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 5, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 9
                         },
                         new
                         {
-                            Id = 288,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 11, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 289,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 1, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 289,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
+                            UserId = 6
                         },
                         new
                         {
                             Id = 290,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 3, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
+                            IsCopy = false,
+                            UserId = 13
                         },
                         new
                         {
                             Id = 291,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 8, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 8, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 14
@@ -2983,172 +2992,98 @@ namespace RebtelTest.Data.Migrations
                         new
                         {
                             Id = 292,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 293,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 11, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 294,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 295,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 296,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 3, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 297,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 5, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 298,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 299,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 300,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 7, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 301,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 302,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 8, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 6
                         },
                         new
                         {
-                            Id = 303,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 3, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 304,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
-                        },
-                        new
-                        {
-                            Id = 305,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 9, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 306,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 9, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 293,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 10, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 13
                         },
                         new
                         {
-                            Id = 307,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 9, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 294,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 3, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
+                            IsCopy = true,
+                            UserId = 14
                         },
                         new
                         {
-                            Id = 308,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 11, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 309,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 295,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 12
                         },
                         new
                         {
-                            Id = 310,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 9, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 296,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 8, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 297,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 298,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 1, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 299,
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 5, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 300,
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 4, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 301,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 9, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 302,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 8, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             ReturnDate = new DateTime(2022, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -3156,100 +3091,175 @@ namespace RebtelTest.Data.Migrations
                         },
                         new
                         {
-                            Id = 311,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 8, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 303,
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 10, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 1
+                            UserId = 19
                         },
                         new
                         {
-                            Id = 312,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 12, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 304,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 305,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 11, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 306,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 307,
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 4, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 13
                         },
                         new
                         {
-                            Id = 313,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 8, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 308,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 2, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 314,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 4, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 315,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 8, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 316,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 5, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 317,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 10, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ReturnDate = new DateTime(2022, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserId = 5
                         },
                         new
                         {
-                            Id = 318,
+                            Id = 309,
                             BookId = 5,
-                            BorrowedDate = new DateTime(2021, 10, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 8, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 7
                         },
                         new
                         {
-                            Id = 319,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 320,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 310,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 10, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 1
                         },
                         new
                         {
-                            Id = 321,
+                            Id = 311,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 8, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 312,
                             BookId = 16,
-                            BorrowedDate = new DateTime(2021, 5, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 9, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 313,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 12, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 314,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 10, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 315,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 316,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 2, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 317,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 318,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 319,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 12, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 320,
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 321,
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 12, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 8
@@ -3258,62 +3268,61 @@ namespace RebtelTest.Data.Migrations
                         {
                             Id = 322,
                             BookId = 7,
-                            BorrowedDate = new DateTime(2021, 12, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 8, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
+                            UserId = 1
                         },
                         new
                         {
                             Id = 323,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 11, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 4, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 11
+                            UserId = 3
                         },
                         new
                         {
                             Id = 324,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 2, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
+                            IsCopy = true,
+                            UserId = 8
                         },
                         new
                         {
                             Id = 325,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 12, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 326,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 327,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 3, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 1, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 12
                         },
                         new
                         {
+                            Id = 326,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 4, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 327,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 3, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
                             Id = 328,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 10, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 12
@@ -3321,98 +3330,100 @@ namespace RebtelTest.Data.Migrations
                         new
                         {
                             Id = 329,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 9, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 9, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
                         },
                         new
                         {
                             Id = 330,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 4, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 11, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 11
+                            UserId = 1
                         },
                         new
                         {
                             Id = 331,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 8, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 332,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 333,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 334,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 335,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 336,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 7, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 337,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 12, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 338,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 7
                         },
                         new
                         {
+                            Id = 332,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 333,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 334,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 10, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 335,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 336,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 4, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 337,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 4, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 338,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
                             Id = 339,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 7, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 2, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 18
@@ -3420,627 +3431,52 @@ namespace RebtelTest.Data.Migrations
                         new
                         {
                             Id = 340,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 5, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
+                            IsCopy = false,
+                            UserId = 13
                         },
                         new
                         {
                             Id = 341,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 5, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
+                            IsCopy = true,
+                            UserId = 6
                         },
                         new
                         {
                             Id = 342,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 8, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
+                            IsCopy = true,
+                            UserId = 8
                         },
                         new
                         {
                             Id = 343,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 4, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
+                            IsCopy = false,
+                            UserId = 7
                         },
                         new
                         {
                             Id = 344,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 3, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
+                            IsCopy = true,
+                            UserId = 6
                         },
                         new
                         {
                             Id = 345,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 346,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 9, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 347,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 348,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 10, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 349,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 8, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 350,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 351,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 12, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 352,
                             BookId = 18,
-                            BorrowedDate = new DateTime(2021, 8, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 2, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 353,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 4, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 354,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 3, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 355,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 3, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 2, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 356,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 11, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 357,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 5, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 358,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 359,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 360,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 10, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
-                        },
-                        new
-                        {
-                            Id = 361,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 2, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 362,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 1, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 363,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 3, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 364,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 365,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 10, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 366,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 2, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 367,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 1, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
-                        },
-                        new
-                        {
-                            Id = 368,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 7, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 369,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 10, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 370,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 371,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 6, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 372,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 11, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 373,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 10, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 374,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 10, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 375,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 376,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 377,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 378,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 379,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 12, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 380,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 10, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 381,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 11, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 382,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 383,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 3, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 384,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 4, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 385,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 11, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 386,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 12, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 387,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 7, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 2, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 388,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 3, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 389,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 2, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
-                        },
-                        new
-                        {
-                            Id = 390,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 7, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 391,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 11, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 392,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 393,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 394,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 11, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 395,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 12, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 396,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 8, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 397,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 3, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
-                        },
-                        new
-                        {
-                            Id = 398,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 7, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 399,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 400,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 10, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 401,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
-                        },
-                        new
-                        {
-                            Id = 402,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 403,
-                            BookId = 1,
-                            BorrowedDate = new DateTime(2021, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 404,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 4, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 405,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 406,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 5, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 407,
-                            BookId = 11,
                             BorrowedDate = new DateTime(2021, 11, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
@@ -4048,102 +3484,190 @@ namespace RebtelTest.Data.Migrations
                         },
                         new
                         {
-                            Id = 408,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 409,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 410,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 9, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 411,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 412,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 413,
+                            Id = 346,
                             BookId = 3,
-                            BorrowedDate = new DateTime(2021, 11, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 414,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 7, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 7, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 17
+                            UserId = 11
                         },
                         new
                         {
-                            Id = 415,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 347,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
+                            UserId = 3
                         },
                         new
                         {
-                            Id = 416,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 348,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 3, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 1
                         },
                         new
                         {
-                            Id = 417,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 349,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 9
+                            ReturnDate = new DateTime(2022, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
                         },
                         new
                         {
-                            Id = 418,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 2, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 350,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 10, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 351,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 10, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 352,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 353,
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 9, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 354,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 9, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 355,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 356,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 357,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 358,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 359,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 10, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 360,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 11, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 361,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 3, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 362,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 3, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 363,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 364,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 9, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 365,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 10, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 366,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 4, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             ReturnDate = new DateTime(2022, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -4151,137 +3675,613 @@ namespace RebtelTest.Data.Migrations
                         },
                         new
                         {
-                            Id = 419,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 8, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 420,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 8, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 421,
+                            Id = 367,
                             BookId = 4,
-                            BorrowedDate = new DateTime(2021, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 422,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 7, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 423,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 424,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 4, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 12, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 13
                         },
                         new
                         {
-                            Id = 425,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 426,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 368,
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 17
+                            UserId = 3
                         },
                         new
                         {
-                            Id = 427,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 2, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 369,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 10, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 370,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 4
                         },
                         new
                         {
-                            Id = 428,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 12, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 371,
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 9
+                            UserId = 3
                         },
                         new
                         {
-                            Id = 429,
+                            Id = 372,
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 8, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 373,
+                            BookId = 17,
+                            BorrowedDate = new DateTime(2021, 10, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 13
+                        },
+                        new
+                        {
+                            Id = 374,
                             BookId = 14,
+                            BorrowedDate = new DateTime(2021, 9, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 375,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 3, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 376,
+                            BookId = 6,
                             BorrowedDate = new DateTime(2021, 3, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 430,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 9, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
-                        },
-                        new
-                        {
-                            Id = 431,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 3, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
+                            UserId = 19
                         },
                         new
                         {
-                            Id = 432,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 12, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 377,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 12, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 378,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 1, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 18
                         },
                         new
                         {
-                            Id = 433,
-                            BookId = 17,
+                            Id = 379,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 11, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 380,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 381,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 382,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 2, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 383,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 8, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 384,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 4, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 385,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 1, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 386,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 11, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 387,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 9, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 388,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 7, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 389,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 4, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 390,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 391,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 8, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 392,
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 3, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 393,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 394,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 8, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 395,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 12, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 396,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 4, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 397,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 7, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 398,
+                            BookId = 9,
                             BorrowedDate = new DateTime(2021, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 399,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 4, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 400,
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 9
+                        },
+                        new
+                        {
+                            Id = 401,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 9
+                        },
+                        new
+                        {
+                            Id = 402,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 3, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 403,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 7, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 404,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 3, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 405,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 406,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 7, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 407,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 10, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 408,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 409,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 9, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 410,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 10, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 411,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 4, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 412,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 413,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 7, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 9
+                        },
+                        new
+                        {
+                            Id = 414,
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 415,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 11, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 416,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 417,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 5, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 418,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 10, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 419,
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 6, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 9
+                        },
+                        new
+                        {
+                            Id = 420,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 5, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 421,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 6, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 422,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 423,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 424,
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 7, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 425,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 9, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 426,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 8, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 427,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 428,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 11, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 429,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 430,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 431,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 6, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 432,
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 5, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 433,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 13
@@ -4290,126 +4290,25 @@ namespace RebtelTest.Data.Migrations
                         {
                             Id = 434,
                             BookId = 5,
-                            BorrowedDate = new DateTime(2021, 12, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
-                            UserId = 6
+                            ReturnDate = new DateTime(2022, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
                         },
                         new
                         {
                             Id = 435,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 10, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 7
-                        },
-                        new
-                        {
-                            Id = 436,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 8, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 437,
-                            BookId = 9,
-                            BorrowedDate = new DateTime(2021, 12, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
-                        },
-                        new
-                        {
-                            Id = 438,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 12, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 439,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 8, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 11, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 13
                         },
                         new
                         {
-                            Id = 440,
+                            Id = 436,
                             BookId = 12,
-                            BorrowedDate = new DateTime(2021, 12, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 441,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 1, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 442,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
-                        },
-                        new
-                        {
-                            Id = 443,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 4, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 444,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 445,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 5, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 2
-                        },
-                        new
-                        {
-                            Id = 446,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 447,
-                            BookId = 11,
                             BorrowedDate = new DateTime(2021, 9, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
@@ -4417,341 +4316,18 @@ namespace RebtelTest.Data.Migrations
                         },
                         new
                         {
-                            Id = 448,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 8, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 449,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 11, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 450,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 8, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 451,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 5, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
-                        },
-                        new
-                        {
-                            Id = 452,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 9, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 453,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 11, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 454,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 455,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 8, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 456,
-                            BookId = 7,
-                            BorrowedDate = new DateTime(2021, 11, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 457,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 18
-                        },
-                        new
-                        {
-                            Id = 458,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            ReturnDate = new DateTime(2022, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
-                        },
-                        new
-                        {
-                            Id = 459,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 7, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 460,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 2, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 461,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 9, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 462,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 4, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 463,
-                            BookId = 14,
-                            BorrowedDate = new DateTime(2021, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 11
-                        },
-                        new
-                        {
-                            Id = 464,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 12, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 465,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 11, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 466,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 13
-                        },
-                        new
-                        {
-                            Id = 467,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 9, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 468,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 7, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 469,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 470,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 471,
-                            BookId = 16,
-                            BorrowedDate = new DateTime(2021, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 9
-                        },
-                        new
-                        {
-                            Id = 472,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 12, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 473,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 9, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 474,
+                            Id = 437,
                             BookId = 9,
                             BorrowedDate = new DateTime(2021, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 475,
-                            BookId = 2,
-                            BorrowedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 476,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 10, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 477,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 4, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 4
                         },
                         new
                         {
-                            Id = 478,
-                            BookId = 4,
-                            BorrowedDate = new DateTime(2021, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 19
-                        },
-                        new
-                        {
-                            Id = 479,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 4, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 1
-                        },
-                        new
-                        {
-                            Id = 480,
-                            BookId = 18,
-                            BorrowedDate = new DateTime(2021, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 17
-                        },
-                        new
-                        {
-                            Id = 481,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 12
-                        },
-                        new
-                        {
-                            Id = 482,
-                            BookId = 17,
-                            BorrowedDate = new DateTime(2021, 1, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 6
-                        },
-                        new
-                        {
-                            Id = 483,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 484,
-                            BookId = 12,
-                            BorrowedDate = new DateTime(2021, 5, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 438,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             ReturnDate = new DateTime(2022, 2, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -4759,93 +4335,241 @@ namespace RebtelTest.Data.Migrations
                         },
                         new
                         {
-                            Id = 485,
+                            Id = 439,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 7, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 440,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 10, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 441,
                             BookId = 11,
-                            BorrowedDate = new DateTime(2021, 10, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 7, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 2, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 442,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 443,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 444,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 10, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 445,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 446,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 447,
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 17
                         },
                         new
                         {
-                            Id = 486,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 448,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 6, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
-                            ReturnDate = new DateTime(2022, 2, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ReturnDate = new DateTime(2022, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserId = 10
                         },
                         new
                         {
-                            Id = 487,
-                            BookId = 11,
-                            BorrowedDate = new DateTime(2021, 4, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 488,
-                            BookId = 6,
-                            BorrowedDate = new DateTime(2021, 10, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
-                        },
-                        new
-                        {
-                            Id = 489,
-                            BookId = 8,
-                            BorrowedDate = new DateTime(2021, 11, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 449,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 5, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
                             UserId = 9
                         },
                         new
                         {
-                            Id = 490,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 6, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 450,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 7, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
-                            ReturnDate = new DateTime(2022, 1, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
+                            UserId = 16
                         },
                         new
                         {
-                            Id = 491,
-                            BookId = 3,
-                            BorrowedDate = new DateTime(2021, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 451,
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 7, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 13
+                        },
+                        new
+                        {
+                            Id = 452,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 5, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 453,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 454,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 455,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 5, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 456,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 9, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 18
                         },
                         new
                         {
-                            Id = 492,
+                            Id = 457,
                             BookId = 16,
-                            BorrowedDate = new DateTime(2021, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 3, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 458,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 4, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 459,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 2, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 460,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 11, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            ReturnDate = new DateTime(2022, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 461,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 462,
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 8, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserId = 15
                         },
                         new
                         {
-                            Id = 493,
-                            BookId = 5,
-                            BorrowedDate = new DateTime(2021, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 463,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 12, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = false,
-                            UserId = 1
+                            UserId = 3
                         },
                         new
                         {
-                            Id = 494,
+                            Id = 464,
                             BookId = 14,
                             BorrowedDate = new DateTime(2021, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
@@ -4854,45 +4578,320 @@ namespace RebtelTest.Data.Migrations
                         },
                         new
                         {
-                            Id = 495,
-                            BookId = 19,
-                            BorrowedDate = new DateTime(2021, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = false,
-                            UserId = 3
-                        },
-                        new
-                        {
-                            Id = 496,
-                            BookId = 13,
-                            BorrowedDate = new DateTime(2021, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 4
-                        },
-                        new
-                        {
-                            Id = 497,
-                            BookId = 15,
-                            BorrowedDate = new DateTime(2021, 10, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
-                            IsCopy = true,
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 498,
-                            BookId = 10,
-                            BorrowedDate = new DateTime(2021, 11, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Id = 465,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 14
                         },
                         new
                         {
+                            Id = 466,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 467,
+                            BookId = 6,
+                            BorrowedDate = new DateTime(2021, 4, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 468,
+                            BookId = 12,
+                            BorrowedDate = new DateTime(2021, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 469,
+                            BookId = 11,
+                            BorrowedDate = new DateTime(2021, 2, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 470,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 4, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 471,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 3, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 472,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 8, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 473,
+                            BookId = 18,
+                            BorrowedDate = new DateTime(2021, 9, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 474,
+                            BookId = 19,
+                            BorrowedDate = new DateTime(2021, 2, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 7
+                        },
+                        new
+                        {
+                            Id = 475,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 10, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 476,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 477,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 478,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 8, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 479,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 5, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 480,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 4, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 481,
+                            BookId = 5,
+                            BorrowedDate = new DateTime(2021, 11, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 482,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 8, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 16
+                        },
+                        new
+                        {
+                            Id = 483,
+                            BookId = 13,
+                            BorrowedDate = new DateTime(2021, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
+                        },
+                        new
+                        {
+                            Id = 484,
+                            BookId = 7,
+                            BorrowedDate = new DateTime(2021, 2, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 485,
+                            BookId = 8,
+                            BorrowedDate = new DateTime(2021, 11, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 14
+                        },
+                        new
+                        {
+                            Id = 486,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 10, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 12
+                        },
+                        new
+                        {
+                            Id = 487,
+                            BookId = 2,
+                            BorrowedDate = new DateTime(2021, 6, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 488,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 489,
+                            BookId = 4,
+                            BorrowedDate = new DateTime(2021, 4, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 8
+                        },
+                        new
+                        {
+                            Id = 490,
+                            BookId = 10,
+                            BorrowedDate = new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 17
+                        },
+                        new
+                        {
+                            Id = 491,
+                            BookId = 9,
+                            BorrowedDate = new DateTime(2021, 8, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            ReturnDate = new DateTime(2022, 1, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 10
+                        },
+                        new
+                        {
+                            Id = 492,
+                            BookId = 16,
+                            BorrowedDate = new DateTime(2021, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 5
+                        },
+                        new
+                        {
+                            Id = 493,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 4, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            ReturnDate = new DateTime(2022, 1, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 15
+                        },
+                        new
+                        {
+                            Id = 494,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 6
+                        },
+                        new
+                        {
+                            Id = 495,
+                            BookId = 1,
+                            BorrowedDate = new DateTime(2021, 11, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 9
+                        },
+                        new
+                        {
+                            Id = 496,
+                            BookId = 15,
+                            BorrowedDate = new DateTime(2021, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = true,
+                            UserId = 18
+                        },
+                        new
+                        {
+                            Id = 497,
+                            BookId = 14,
+                            BorrowedDate = new DateTime(2021, 5, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 11
+                        },
+                        new
+                        {
+                            Id = 498,
+                            BookId = 3,
+                            BorrowedDate = new DateTime(2021, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
+                            IsCopy = false,
+                            UserId = 19
+                        },
+                        new
+                        {
                             Id = 499,
                             BookId = 2,
-                            BorrowedDate = new DateTime(2021, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            BorrowedDate = new DateTime(2021, 1, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExpectedReturnDate = new DateTime(2022, 4, 28, 0, 0, 0, 0, DateTimeKind.Local),
                             IsCopy = true,
                             UserId = 8

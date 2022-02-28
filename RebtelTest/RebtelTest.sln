@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RebtelTest.Service", "RebtelTest.Service\RebtelTest.Service.csproj", "{2C32EE32-748B-4DA8-90B2-D54D2CF79EEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RebtelTest.Service", "RebtelTest.Service\RebtelTest.Service.csproj", "{2C32EE32-748B-4DA8-90B2-D54D2CF79EEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RebtelTest.Data", "RebtelTest.Data\RebtelTest.Data.csproj", "{E22875F5-6E7B-459D-953D-7826D7ECB862}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RebtelTest.Data", "RebtelTest.Data\RebtelTest.Data.csproj", "{E22875F5-6E7B-459D-953D-7826D7ECB862}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RebtelTest.Web", "RebtelTest.Web\RebtelTest.Web.csproj", "{39E424FE-2E31-4BA4-9C24-88C3E47DB4D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RebtelTest.Web", "RebtelTest.Web\RebtelTest.Web.csproj", "{39E424FE-2E31-4BA4-9C24-88C3E47DB4D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

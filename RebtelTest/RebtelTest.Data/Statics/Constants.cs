@@ -7,6 +7,12 @@
         public static class GrpcServer
         {
             public const string EndPoint = "https://localhost:5001";
+
+            public static class Message
+            {
+                public const string BookNotFound = "The book cannot be found for the specified book id.";
+                public const string BorrowedAvailableStatus = "Borrowed: {0}, Available {1}";
+            }
         }
 
         public static class GrpcClient

@@ -35,7 +35,18 @@ namespace RebtelTest.Service.Helpers
 
         public GetBorrowedAvailableStatusResponse GetBorrowedAvailableStatus(int bookId)
         {
-            return null;
+            GetBorrowedAvailableStatusResponse response = new();
+
+            Data.Models.Book book = this.dbContext.Books.Find(bookId);
+
+            if (book == null)
+            {
+                response.Status= Constants.GrpcServer.Message.BookNotFound;
+            }
+
+            response.Status = string.Format(Constants.GrpcServer.Message.BorrowedAvailableStatus, book.NoOfCopyBooks, book.NoOfAvailableBooks);
+
+            return response;
         }
     }
 }

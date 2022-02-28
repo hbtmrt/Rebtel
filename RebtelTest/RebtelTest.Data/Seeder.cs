@@ -30,14 +30,15 @@ namespace RebtelTest.Data
                 int bookId = random.Next(1, 20);
                 int userId = random.Next(1, 20);
 
-                items.Add(new UserBorrowedBook {
+                items.Add(new UserBorrowedBook
+                {
                     Id = i,
                     BookId = bookId,
                     UserId = userId,
                     IsCopy = userId % 2 == 0,
                     BorrowedDate = new DateTime(2021, random.Next(1, 13), random.Next(1, 28)),
                     ExpectedReturnDate = DateTime.Today.AddMonths(2),
-                    ReturnDate = userId % 5 == 0 ? new DateTime(2022, random.Next(1, 3), random.Next(1, 27)) :null
+                    ReturnDate = userId % 5 == 0 ? new DateTime(2022, random.Next(1, 3), random.Next(1, 27)) : null
                 });
             }
 
@@ -52,13 +53,14 @@ namespace RebtelTest.Data
 
         private List<User> GenerateUsers()
         {
+
             List<User> users = new List<User>();
             for (int i = 1; i < 20; i++)
             {
                 users.Add(new User
                 {
                     Id = i,
-                    Name = $"My Book {i}"
+                    Name = $"My Book {i}",
                 });
             }
 
@@ -73,13 +75,16 @@ namespace RebtelTest.Data
 
         private List<Book> GenerateBooks()
         {
+            Random random = new();
             List<Book> books = new List<Book>();
             for (int i = 1; i < 20; i++)
             {
                 books.Add(new Book
                 {
-                        Id = i,
-                        Name = $"My Book {i}"
+                    Id = i,
+                    Name = $"My Book {i}",
+                    NoOfCopyBooks = random.Next(50, 100),
+                    NoOfBorrowedBooks = random.Next(1, 50)
                 });
             }
 
