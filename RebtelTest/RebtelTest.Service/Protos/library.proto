@@ -5,6 +5,7 @@ option csharp_namespace = "RebtelTest.Service.Protos";
 service LibraryManager
 {
     rpc GetMostBorrowedBooks (GetMostBorrowedBooksRequest) returns(Books);
+    rpc GetBorrowedAvailableStatus(GetBorrowedAvailableStatusRequest) returns (GetBorrowedAvailableStatusResponse);
 }
 
 message GetMostBorrowedBooksRequest {}
@@ -15,4 +16,14 @@ message Book {
 
 message Books {
   repeated Book bookList =1;
+}
+
+message GetBorrowedAvailableStatusRequest
+{
+    int32 bookId = 1;
+}
+
+message GetBorrowedAvailableStatusResponse
+{
+    string status = 1;
 }

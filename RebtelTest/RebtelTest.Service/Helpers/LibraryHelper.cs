@@ -2,6 +2,7 @@
 using RebtelTest.Data.Statics;
 using RebtelTest.Service.Converters;
 using RebtelTest.Service.Protos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -19,8 +20,6 @@ namespace RebtelTest.Service.Helpers
 
         public Books GetMostBorrowedBooks()
         {
-            var dict = new Dictionary<int, int>();
-
             List<int> bookIds = this.dbContext.UserBorrowedBooks
                 .GroupBy(ubb => ubb.BookId)
                 .Select(ubb => new KeyValuePair<int, int>(ubb.Key, ubb.Count()))
@@ -32,6 +31,11 @@ namespace RebtelTest.Service.Helpers
 
             var books = dbContext.Books.Where(b => bookIds.Contains(b.Id)).ToList();
             return protoConverter.Convert(books);
+        }
+
+        public GetBorrowedAvailableStatusResponse GetBorrowedAvailableStatus(int bookId)
+        {
+            return null;
         }
     }
 }
