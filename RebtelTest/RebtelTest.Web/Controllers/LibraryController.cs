@@ -64,5 +64,18 @@ namespace RebtelTest.Web.Controllers
 
             return string.Join(",", books.BookList.Select(bl => bl.Name));
         }
+
+        [HttpGet("books/{id}/possible-related-books")]
+        public async Task<string> GetPossibleRelatedBooks(int id)
+        {
+            // What other books were borrowed by individuals that borrowed a particular book?
+
+            var books = await client.GetPossibleRelatedBooksAsync(new GetPossibleRelatedBooksRequest
+            {
+                BookId = id
+            });
+
+            return string.Join(",", books.BookList.Select(bl => bl.Name));
+        }
     }
 }

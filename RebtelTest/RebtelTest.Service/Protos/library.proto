@@ -10,6 +10,7 @@ service LibraryManager
     rpc GetBorrowedAvailableStatus(GetBorrowedAvailableStatusRequest) returns (GetBorrowedAvailableStatusResponse);
     rpc GetUsersBorrowedMostBooks(GetUsersBorrowedMostBooksRequest) returns (GetUsersBorrowedMostBooksResponse);
     rpc GetUserBorrowedBooks(GetUserBorrowedBooksRequest) returns (Books);
+    rpc GetPossibleRelatedBooks(GetPossibleRelatedBooksRequest) returns (Books);
 }
 
 message GetMostBorrowedBooksRequest {}
@@ -48,5 +49,10 @@ message GetUserBorrowedBooksRequest
     int32 userId = 1;
     google.protobuf.Timestamp fromDate = 2;
     google.protobuf.Timestamp toDate = 3;
+}
+
+message GetPossibleRelatedBooksRequest
+{
+    int32 bookId = 1;
 }
 

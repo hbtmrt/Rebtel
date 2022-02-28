@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using RebtelTest.Data;
+﻿using RebtelTest.Data;
 using RebtelTest.Data.Models;
 using RebtelTest.Data.Statics;
 using RebtelTest.Service.Converters;
@@ -108,9 +107,23 @@ namespace RebtelTest.Service.Helpers
             this.dbContext.Entry(user).Collection(s => s.UserBorrowedBooks).Load();
 
             List<int> bookIds = user.UserBorrowedBooks
-                .Where(ubb => ubb.BorrowedDate >= fromDate && ubb.BorrowedDate <= toDate).Select(ubb => ubb.BookId).ToList();
+                .Where(ubb => ubb.BorrowedDate >= fromDate && ubb.BorrowedDate <= toDate).Select(ubb => ubb.BookId).Distinct().ToList();
             List<Data.Models.Book> books = this.dbContext.Books.Where(b => bookIds.Contains(b.Id)).ToList();
 
+            return protoConverter.Convert(books);
+        }
+
+        public Books GetPossibleRelatedBooks(int bookId)
+        {
+            List<int> userIds = this.dbContext.UserBorrowedBooks
+                .Where(ubb => ubb.BookId == bookId)
+                .Select(ubb => ubb.UserId).Distinct().ToList();
+
+            List<int> bookIds = this.dbContext.UserBorrowedBooks
+                .Where(ubb => userIds.Contains(ubb.UserId) && ubb.BookId != bookId)
+                .Select(ubb => ubb.BookId).Distinct().ToList();
+
+            List<Data.Models.Book> books = this.dbContext.Books.Where(b => bookIds.Contains(b.Id)).ToList();
             return protoConverter.Convert(books);
         }
     }
