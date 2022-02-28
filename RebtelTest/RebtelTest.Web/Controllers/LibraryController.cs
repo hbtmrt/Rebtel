@@ -16,7 +16,7 @@ namespace RebtelTest.Web.Controllers
 
         public LibraryController()
         {
-            using var channel = GrpcChannel.ForAddress(Constants.GrpcServer.EndPoint);
+            GrpcChannel channel = GrpcChannel.ForAddress(Constants.GrpcServer.EndPoint);
             client = new LibraryManager.LibraryManagerClient(channel);
         }
 
