@@ -29,5 +29,10 @@ namespace RebtelTest.Service.Services
         {
             return Task.FromResult(libraryHelper.GetUsersWithMostBorrowings(request));
         }
+
+        public override Task<Books> GetUserBorrowedBooks(GetUserBorrowedBooksRequest request, ServerCallContext context)
+        {
+            return Task.FromResult(libraryHelper.GetUserBorrowedBooks(request));
+        }
     }
 }

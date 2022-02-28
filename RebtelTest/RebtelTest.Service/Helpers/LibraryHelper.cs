@@ -1,4 +1,5 @@
 ﻿using RebtelTest.Data;
+using RebtelTest.Data.Models;
 using RebtelTest.Data.Statics;
 using RebtelTest.Service.Converters;
 using RebtelTest.Service.Protos;
@@ -49,6 +50,11 @@ namespace RebtelTest.Service.Helpers
 
         public GetUsersBorrowedMostBooksResponse GetUsersWithMostBorrowings(GetUsersBorrowedMostBooksRequest request)
         {
+            if (request.FromDate == null || request.ToDate == null)
+            {
+                return null;
+            }
+
             DateTime fromDate = request.FromDate.ToDateTime();
             DateTime toDate = request.ToDate.ToDateTime();
 
@@ -78,6 +84,26 @@ namespace RebtelTest.Service.Helpers
             });
 
             return response;
+        }
+
+        public Books GetUserBorrowedBooks(GetUserBorrowedBooksRequest request)
+        {
+            if (request.FromDate == null || request.ToDate == null)
+            {
+                return null;
+            }
+
+            User user = this.dbContext.Users.Find(request.UserId);
+
+            if (user == null)
+            {
+                return null;
+            }
+
+            List<int> bookIds = user.UserBorrowedBooks.Select(ubb => ubb.BookId).ToList();
+            List<Data.Models.Book> books = this.dbContext.Books.Where(b => bookIds.Contains(b.Id)).ToList();
+
+            return protoConverter.Convert(books);
         }
     }
 }
