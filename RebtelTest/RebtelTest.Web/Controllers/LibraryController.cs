@@ -1,7 +1,9 @@
-﻿using Grpc.Net.Client;
+﻿using Google.Protobuf.WellKnownTypes;
+using Grpc.Net.Client;
 using Microsoft.AspNetCore.Mvc;
 using RebtelTest.Data.Statics;
 using RebtelTest.Web.Protos;
+using System;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +39,17 @@ namespace RebtelTest.Web.Controllers
         {
             GetBorrowedAvailableStatusResponse response = await client.GetBorrowedAvailableStatusAsync(new GetBorrowedAvailableStatusRequest { BookId = id });
             return response.Status;
+        }
+
+        [HttpGet("users/with-most-borrowed-books")]
+        public async Task<string> GetUsersWithMostBorrowedBooks(DateTime from, DateTime to)
+        {
+            GetUsersBorrowedMostBooksResponse response = await client.GetUsersBorrowedMostBooksAsync(new GetUsersBorrowedMostBooksRequest {
+                FromDate = DateTime.SpecifyKind(from, DateTimeKind.Utc).ToTimestamp(),
+                ToDate = DateTime.SpecifyKind(to, DateTimeKind.Utc).ToTimestamp()
+            });
+
+            return response.Names.ToString();
         }
     }
 }

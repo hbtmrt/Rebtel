@@ -1,11 +1,14 @@
 syntax = "proto3";
 
+import "google/protobuf/timestamp.proto";
+
 option csharp_namespace = "RebtelTest.Web.Protos";
 
 service LibraryManager
 {
     rpc GetMostBorrowedBooks (GetMostBorrowedBooksRequest) returns(Books);
     rpc GetBorrowedAvailableStatus(GetBorrowedAvailableStatusRequest) returns (GetBorrowedAvailableStatusResponse);
+    rpc GetUsersBorrowedMostBooks(GetUsersBorrowedMostBooksRequest) returns (GetUsersBorrowedMostBooksResponse);
 }
 
 message GetMostBorrowedBooksRequest {}
@@ -26,4 +29,15 @@ message GetBorrowedAvailableStatusRequest
 message GetBorrowedAvailableStatusResponse
 {
     string status = 1;
+}
+
+message GetUsersBorrowedMostBooksRequest
+{
+    google.protobuf.Timestamp fromDate = 1;
+    google.protobuf.Timestamp toDate = 2;
+}
+
+message GetUsersBorrowedMostBooksResponse
+{
+    repeated string names = 1;
 }
