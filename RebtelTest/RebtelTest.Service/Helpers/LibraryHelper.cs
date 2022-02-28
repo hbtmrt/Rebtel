@@ -1,4 +1,5 @@
-﻿using RebtelTest.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using RebtelTest.Data;
 using RebtelTest.Data.Models;
 using RebtelTest.Data.Statics;
 using RebtelTest.Service.Converters;
@@ -93,14 +94,21 @@ namespace RebtelTest.Service.Helpers
                 return null;
             }
 
-            User user = this.dbContext.Users.Find(request.UserId);
+            User user = this.dbContext.Users
+                .Find(request.UserId);
 
             if (user == null)
             {
                 return null;
             }
 
-            List<int> bookIds = user.UserBorrowedBooks.Select(ubb => ubb.BookId).ToList();
+            DateTime fromDate = request.FromDate.ToDateTime();
+            DateTime toDate = request.ToDate.ToDateTime();
+
+            this.dbContext.Entry(user).Collection(s => s.UserBorrowedBooks).Load();
+
+            List<int> bookIds = user.UserBorrowedBooks
+                .Where(ubb => ubb.BorrowedDate >= fromDate && ubb.BorrowedDate <= toDate).Select(ubb => ubb.BookId).ToList();
             List<Data.Models.Book> books = this.dbContext.Books.Where(b => bookIds.Contains(b.Id)).ToList();
 
             return protoConverter.Convert(books);

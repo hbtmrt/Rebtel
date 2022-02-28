@@ -51,5 +51,18 @@ namespace RebtelTest.Web.Controllers
 
             return response.Names.ToString();
         }
+
+        [HttpGet("users/{id}/borrowed-books")]
+        public async Task<string> GetUserBorrowedBooks(int id, DateTime from, DateTime to)
+        {
+            var books = await client.GetUserBorrowedBooksAsync(new GetUserBorrowedBooksRequest
+            {
+                UserId = id,
+                FromDate = DateTime.SpecifyKind(from, DateTimeKind.Utc).ToTimestamp(),
+                ToDate = DateTime.SpecifyKind(to, DateTimeKind.Utc).ToTimestamp()
+            });
+
+            return string.Join(",", books.BookList.Select(bl => bl.Name));
+        }
     }
 }
