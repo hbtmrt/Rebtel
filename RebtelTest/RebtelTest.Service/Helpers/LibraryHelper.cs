@@ -2,7 +2,6 @@
 using RebtelTest.Data.Statics;
 using RebtelTest.Service.Converters;
 using RebtelTest.Service.Protos;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -30,21 +29,18 @@ namespace RebtelTest.Service.Helpers
                 .ToList();
 
             var books = dbContext.Books.Where(b => bookIds.Contains(b.Id)).ToList();
-            return protoConverter.Convert(books);
+            return protoConverter.ConvertGetBorrowedAvailableStatus(books);
         }
 
-        public GetBorrowedAvailableStatusResponse GetBorrowedAvailableStatus(int bookId)
+        public GetBorrowedAvailableStatusResponse (int bookId)
         {
             GetBorrowedAvailableStatusResponse response = new();
 
             Data.Models.Book book = this.dbContext.Books.Find(bookId);
 
-            if (book == null)
-            {
-                response.Status= Constants.GrpcServer.Message.BookNotFound;
-            }
-
-            response.Status = string.Format(Constants.GrpcServer.Message.BorrowedAvailableStatus, book.NoOfCopyBooks, book.NoOfAvailableBooks);
+            response.Status = book == null ?
+                Constants.GrpcServer.Message.BookNotFound
+                : string.Format(Constants.GrpcServer.Message.BorrowedAvailableStatus, book.NoOfCopyBooks, book.NoOfAvailableBooks);
 
             return response;
         }

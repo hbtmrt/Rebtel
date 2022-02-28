@@ -33,15 +33,10 @@ namespace RebtelTest.Web.Controllers
         }
 
         [HttpGet("books/{id}/borrowed-available-status")]
-        public async Task<string> GetBorrowedAvailableStatus(int bookId)
+        public async Task<string> GetBorrowedAvailableStatus(int id)
         {
-            Books books = await client.GetMostBorrowedBooksAsync(new GetMostBorrowedBooksRequest { });
-
-            StringBuilder sb = new();
-            sb.AppendLine(string.Format(Constants.GrpcClient.Message.MostBorrowedBooksThreshold, Constants.MostBorrowedBooksThreshold));
-            sb.AppendLine(string.Join(",", books.BookList.Select(bl => bl.Name)));
-
-            return sb.ToString();
+            GetBorrowedAvailableStatusResponse response = await client.GetBorrowedAvailableStatusAsync(new GetBorrowedAvailableStatusRequest { BookId = id });
+            return response.Status;
         }
     }
 }
