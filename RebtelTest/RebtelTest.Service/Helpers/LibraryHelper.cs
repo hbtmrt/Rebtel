@@ -2,6 +2,7 @@
 using RebtelTest.Data.Statics;
 using RebtelTest.Service.Converters;
 using RebtelTest.Service.Protos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,6 +12,7 @@ namespace RebtelTest.Service.Helpers
     {
         private readonly LibraryContext dbContext;
         private readonly ProtoConverter protoConverter = new();
+        private readonly DateHelper dateHelper = new();
 
         public LibraryHelper(LibraryContext context)
         {
@@ -29,10 +31,10 @@ namespace RebtelTest.Service.Helpers
                 .ToList();
 
             var books = dbContext.Books.Where(b => bookIds.Contains(b.Id)).ToList();
-            return protoConverter.ConvertGetBorrowedAvailableStatus(books);
+            return protoConverter.Convert(books);
         }
 
-        public GetBorrowedAvailableStatusResponse (int bookId)
+        public GetBorrowedAvailableStatusResponse GetBorrowedAvailableStatus(int bookId)
         {
             GetBorrowedAvailableStatusResponse response = new();
 
@@ -41,6 +43,39 @@ namespace RebtelTest.Service.Helpers
             response.Status = book == null ?
                 Constants.GrpcServer.Message.BookNotFound
                 : string.Format(Constants.GrpcServer.Message.BorrowedAvailableStatus, book.NoOfCopyBooks, book.NoOfAvailableBooks);
+
+            return response;
+        }
+
+        public GetUsersBorrowedMostBooksResponse GetUsersWithMostBorrowings(GetUsersBorrowedMostBooksRequest request)
+        {
+            DateTime fromDate = request.FromDate.ToDateTime();
+            DateTime toDate = request.ToDate.ToDateTime();
+
+            List<int> bookIds = this.dbContext.UserBorrowedBooks
+                .Where(ubb => ubb.BorrowedDate >= fromDate && ubb.BorrowedDate <= toDate)
+                .GroupBy(ubb => ubb.BookId)
+                .Select(ubb => new KeyValuePair<int, int>(ubb.Key, ubb.Count()))
+                .ToList()
+                .Where(kv => kv.Value > Constants.MostBorrowedBooksThreshold)
+                .OrderByDescending(kv => kv.Value)
+                .Select(kv => kv.Key)
+                .ToList();
+
+            List<int> userIds = this.dbContext.UserBorrowedBooks
+                .Where(ubb => bookIds.Contains(ubb.BookId))
+                .Select(ubb => ubb.UserId)
+                .Distinct()
+                .ToList();
+
+            List<string> users = this.dbContext.Users.Where(u => userIds.Contains(u.Id)).Select(u => u.Name).ToList();
+
+            GetUsersBorrowedMostBooksResponse response = new GetUsersBorrowedMostBooksResponse();
+
+            users.ForEach(u =>
+            {
+                response.Names.Add(u);
+            });
 
             return response;
         }
