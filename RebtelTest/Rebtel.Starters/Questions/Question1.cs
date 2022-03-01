@@ -2,6 +2,10 @@
 
 namespace Rebtel.Starters.Questions
 {
+    /// <summary>
+    /// Time complexity = O(1)
+    /// Space complexity = O(1)
+    /// </summary>
     public sealed class Question1
     {
         public bool IsPowerOfTwo(int number)

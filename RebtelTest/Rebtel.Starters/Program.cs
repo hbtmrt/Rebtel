@@ -10,6 +10,9 @@ namespace Rebtel.Starters
             var question1 = new Question1();
             bool isPowerOfTwoTest1 = question1.IsPowerOfTwo(64); // returns true
             bool isPowerOfTwoTest2 = question1.IsPowerOfTwo(65); // returns false
+
+            // Question 2
+            string reversed = new Question2().Reverse("Rebtel");
         }
     }
 }
