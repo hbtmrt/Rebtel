@@ -11,6 +11,7 @@ service LibraryManager
     rpc GetUsersBorrowedMostBooks(GetUsersBorrowedMostBooksRequest) returns (GetUsersBorrowedMostBooksResponse);
     rpc GetUserBorrowedBooks(GetUserBorrowedBooksRequest) returns (Books);
     rpc GetPossibleRelatedBooks(GetPossibleRelatedBooksRequest) returns (Books);
+    rpc GetReadRate(GetReadRateRequest) returns (GetReadRateResponse);
 }
 
 message GetMostBorrowedBooksRequest {}
@@ -54,5 +55,15 @@ message GetUserBorrowedBooksRequest
 message GetPossibleRelatedBooksRequest
 {
     int32 bookId = 1;
+}
+
+message GetReadRateRequest
+{
+    int32 bookId = 1;
+}
+
+message GetReadRateResponse
+{
+    double rate = 1;
 }
 

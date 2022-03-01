@@ -126,5 +126,23 @@ namespace RebtelTest.Service.Helpers
             List<Data.Models.Book> books = this.dbContext.Books.Where(b => bookIds.Contains(b.Id)).ToList();
             return protoConverter.Convert(books);
         }
+
+        public GetReadRateResponse GetReadRate(int bookId)
+        {
+            var book = this.dbContext.Books.Find(bookId);
+
+            if (book == null)
+            {
+                throw new ArgumentException($"The book cannot be found for the book id: {bookId}");
+            }
+
+            this.dbContext.Entry(book).Collection(s => s.UserBorrowedBooks).Load();
+
+            double avarage = book.UserBorrowedBooks
+                .Select(ubb => book.NoPages / ubb.ReturnDate.Value.Subtract(ubb.BorrowedDate).Days)
+                .Average();
+
+            return new GetReadRateResponse() { Rate = avarage };
+        }
     }
 }

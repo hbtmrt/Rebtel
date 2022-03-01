@@ -39,5 +39,10 @@ namespace RebtelTest.Service.Services
         {
             return Task.FromResult(libraryHelper.GetPossibleRelatedBooks(request.BookId));
         }
+
+        public override Task<GetReadRateResponse> GetReadRate(GetReadRateRequest request, ServerCallContext context)
+        {
+            return Task.FromResult(libraryHelper.GetReadRate(request.BookId));
+        }
     }
 }

@@ -60,7 +60,7 @@ namespace RebtelTest.Data
                 users.Add(new User
                 {
                     Id = i,
-                    Name = $"My Book {i}",
+                    Name = $"User {i}",
                 });
             }
 
@@ -84,7 +84,8 @@ namespace RebtelTest.Data
                     Id = i,
                     Name = $"My Book {i}",
                     NoOfCopyBooks = random.Next(50, 100),
-                    NoOfBorrowedBooks = random.Next(1, 50)
+                    NoOfBorrowedBooks = random.Next(1, 50),
+                    NoPages = random.Next(1,2000)
                 });
             }
 

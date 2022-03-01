@@ -14,6 +14,7 @@ namespace RebtelTest.Data.Models
 
         public int NoOfCopyBooks { get; set; }
         public int NoOfBorrowedBooks { get; set; }
+        public int NoPages { get; set; }
 
         [NotMapped]
         public int NoOfAvailableBooks => NoOfCopyBooks - NoOfBorrowedBooks;
