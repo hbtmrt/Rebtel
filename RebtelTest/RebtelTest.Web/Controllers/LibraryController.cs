@@ -77,5 +77,16 @@ namespace RebtelTest.Web.Controllers
 
             return string.Join(",", books.BookList.Select(bl => bl.Name));
         }
+
+        [HttpGet("books/{id}/read-rate")]
+        public async Task<double> GetReadRate(int id)
+        {
+            GetReadRateResponse readRate = await client.GetReadRateAsync(new GetReadRateRequest
+            {
+                BookId = id
+            });
+
+            return readRate.Rate;
+        }
     }
 }

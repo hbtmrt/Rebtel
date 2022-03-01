@@ -13,7 +13,6 @@ namespace RebtelTest.Service.Helpers
     {
         private readonly LibraryContext dbContext;
         private readonly ProtoConverter protoConverter = new();
-        private readonly DateHelper dateHelper = new();
 
         public LibraryHelper(LibraryContext context)
         {
@@ -139,6 +138,7 @@ namespace RebtelTest.Service.Helpers
             this.dbContext.Entry(book).Collection(s => s.UserBorrowedBooks).Load();
 
             double avarage = book.UserBorrowedBooks
+                .Where(ubb => ubb.ReturnDate.HasValue)
                 .Select(ubb => book.NoPages / ubb.ReturnDate.Value.Subtract(ubb.BorrowedDate).Days)
                 .Average();
 
