@@ -2,10 +2,10 @@
 using Grpc.Net.Client;
 using Microsoft.AspNetCore.Mvc;
 using RebtelTest.Data.Statics;
+using RebtelTest.Web.Helpers;
 using RebtelTest.Web.Protos;
 using System;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace RebtelTest.Web.Controllers
@@ -14,7 +14,14 @@ namespace RebtelTest.Web.Controllers
     [ApiController]
     public class LibraryController : ControllerBase
     {
+        #region Declarations
+
         private LibraryManager.LibraryManagerClient client;
+        private readonly ConverterHelper converterHelper = new();
+
+        #endregion Declarations
+
+        #region Constructor
 
         public LibraryController()
         {
@@ -22,71 +29,137 @@ namespace RebtelTest.Web.Controllers
             client = new LibraryManager.LibraryManagerClient(channel);
         }
 
+        #endregion Constructor
+
+        #region Methods
+
         [HttpGet("books/most-borrowed")]
-        public async Task<string> GetMostBorrowedBooks()
+        public async Task<IActionResult> GetMostBorrowedBooks()
         {
-            Books books = await client.GetMostBorrowedBooksAsync(new GetMostBorrowedBooksRequest { });
-
-            StringBuilder sb = new();
-            sb.AppendLine(string.Format(Constants.GrpcClient.Message.MostBorrowedBooksThreshold, Constants.MostBorrowedBooksThreshold));
-            sb.AppendLine(string.Join(",", books.BookList.Select(bl => bl.Name)));
-
-            return sb.ToString();
+            try
+            {
+                Books books = await client.GetMostBorrowedBooksAsync(new GetMostBorrowedBooksRequest { });
+                return Ok(converterHelper.GetMostBorrowedBooksString(books));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("books/{id}/borrowed-available-status")]
-        public async Task<string> GetBorrowedAvailableStatus(int id)
+        public async Task<IActionResult> GetBorrowedAvailableStatus(int id)
         {
-            GetBorrowedAvailableStatusResponse response = await client.GetBorrowedAvailableStatusAsync(new GetBorrowedAvailableStatusRequest { BookId = id });
-            return response.Status;
+            try
+            {
+                GetBorrowedAvailableStatusResponse response = await client.GetBorrowedAvailableStatusAsync(new GetBorrowedAvailableStatusRequest { BookId = id });
+                return Ok(response.Status);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("users/with-most-borrowed-books")]
-        public async Task<string> GetUsersWithMostBorrowedBooks(DateTime from, DateTime to)
+        public async Task<IActionResult> GetUsersWithMostBorrowedBooks(DateTime from, DateTime to)
         {
-            GetUsersBorrowedMostBooksResponse response = await client.GetUsersBorrowedMostBooksAsync(new GetUsersBorrowedMostBooksRequest {
-                FromDate = DateTime.SpecifyKind(from, DateTimeKind.Utc).ToTimestamp(),
-                ToDate = DateTime.SpecifyKind(to, DateTimeKind.Utc).ToTimestamp()
-            });
+            if (from > to)
+            {
+                return BadRequest(Constants.GrpcClient.Message.FromDateGreaterThanToError);
+            }
 
-            return response.Names.ToString();
+            if (to == DateTime.MinValue)
+            {
+                // if to date is not provided, it is set to Today by default.
+                to = DateTime.Now;
+            }
+
+            try
+            {
+                GetUsersBorrowedMostBooksResponse response = await client.GetUsersBorrowedMostBooksAsync(new GetUsersBorrowedMostBooksRequest
+                {
+                    FromDate = DateTime.SpecifyKind(from, DateTimeKind.Utc).ToTimestamp(),
+                    ToDate = DateTime.SpecifyKind(to, DateTimeKind.Utc).ToTimestamp()
+                });
+
+                return Ok(response.Names.ToString());
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("users/{id}/borrowed-books")]
-        public async Task<string> GetUserBorrowedBooks(int id, DateTime from, DateTime to)
+        public async Task<IActionResult> GetUserBorrowedBooks(int id, DateTime from, DateTime to)
         {
-            var books = await client.GetUserBorrowedBooksAsync(new GetUserBorrowedBooksRequest
+            if (from > to)
             {
-                UserId = id,
-                FromDate = DateTime.SpecifyKind(from, DateTimeKind.Utc).ToTimestamp(),
-                ToDate = DateTime.SpecifyKind(to, DateTimeKind.Utc).ToTimestamp()
-            });
+                return BadRequest(Constants.GrpcClient.Message.FromDateGreaterThanToError);
+            }
 
-            return string.Join(",", books.BookList.Select(bl => bl.Name));
+            if (to == DateTime.MinValue)
+            {
+                // if to date is not provided, it is set to Today by default.
+                to = DateTime.Now;
+            }
+
+            try
+            {
+                var books = await client.GetUserBorrowedBooksAsync(new GetUserBorrowedBooksRequest
+                {
+                    UserId = id,
+                    FromDate = DateTime.SpecifyKind(from, DateTimeKind.Utc).ToTimestamp(),
+                    ToDate = DateTime.SpecifyKind(to, DateTimeKind.Utc).ToTimestamp()
+                });
+
+                return Ok(string.Join(",", books.BookList.Select(bl => bl.Name)));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("books/{id}/possible-related-books")]
-        public async Task<string> GetPossibleRelatedBooks(int id)
+        public async Task<IActionResult> GetPossibleRelatedBooks(int id)
         {
             // What other books were borrowed by individuals that borrowed a particular book?
 
-            var books = await client.GetPossibleRelatedBooksAsync(new GetPossibleRelatedBooksRequest
+            try
             {
-                BookId = id
-            });
+                var books = await client.GetPossibleRelatedBooksAsync(new GetPossibleRelatedBooksRequest
+                {
+                    BookId = id
+                });
 
-            return string.Join(",", books.BookList.Select(bl => bl.Name));
+                return Ok(string.Join(",", books.BookList.Select(bl => bl.Name)));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("books/{id}/read-rate")]
-        public async Task<double> GetReadRate(int id)
+        public async Task<IActionResult> GetReadRate(int id)
         {
-            GetReadRateResponse readRate = await client.GetReadRateAsync(new GetReadRateRequest
+            try
             {
-                BookId = id
-            });
+                GetReadRateResponse readRate = await client.GetReadRateAsync(new GetReadRateRequest
+                {
+                    BookId = id
+                });
 
-            return readRate.Rate;
+                return Ok(readRate.Rate);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
+
+        #endregion Methods
     }
 }

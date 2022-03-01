@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RebtelTest.Data;
+using RebtelTest.Service.Interceptors;
 using RebtelTest.Service.Services;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,11 @@ namespace RebtelTest.Service
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddGrpc();
+            services.AddGrpc(options => {
+                options.Interceptors.Add<ExceptionInterceptor>();
+            });
+
+            // TODO: move the connection string to the configuraiton files.
             services.AddDbContext<LibraryContext>(options => {
                 options.UseSqlServer("server=LAPTOP-NEHCE42E\\SQLEXPRESS;database=library;user=sa;password=123@intel");
             });

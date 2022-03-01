@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace RebtelTest.Service.Converters
 {
+    /// <summary>
+    /// Convert model to proto.
+    /// </summary>
     public sealed class ProtoConverter
     {
         public Book Convert(Data.Models.Book book)

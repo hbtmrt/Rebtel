@@ -2,6 +2,7 @@
 using RebtelTest.Data.Models;
 using RebtelTest.Data.Statics;
 using RebtelTest.Service.Converters;
+using RebtelTest.Service.CustomExceptions;
 using RebtelTest.Service.Protos;
 using System;
 using System.Collections.Generic;
@@ -9,15 +10,28 @@ using System.Linq;
 
 namespace RebtelTest.Service.Helpers
 {
+    /// <summary>
+    /// A helper class to deal with database.
+    /// </summary>
     public sealed class LibraryHelper
     {
+        #region Declarations
+
         private readonly LibraryContext dbContext;
         private readonly ProtoConverter protoConverter = new();
+
+        #endregion Declarations
+
+        #region Constructors
 
         public LibraryHelper(LibraryContext context)
         {
             this.dbContext = context;
         }
+
+        #endregion Constructors
+
+        #region Methods
 
         public Books GetMostBorrowedBooks()
         {
@@ -36,24 +50,27 @@ namespace RebtelTest.Service.Helpers
 
         public GetBorrowedAvailableStatusResponse GetBorrowedAvailableStatus(int bookId)
         {
-            GetBorrowedAvailableStatusResponse response = new();
-
             Data.Models.Book book = this.dbContext.Books.Find(bookId);
 
-            response.Status = book == null ?
-                Constants.GrpcServer.Message.BookNotFound
-                : string.Format(Constants.GrpcServer.Message.BorrowedAvailableStatus, book.NoOfCopyBooks, book.NoOfAvailableBooks);
+            if (book == null)
+            {
+                throw new BookNotFoundException(string.Format(Constants.GrpcServer.Message.BookNotFoundErrorMessage, bookId));
+            }
 
-            return response;
+            // if we have a large date set to query, using explicit loading is always safe and fast.
+            this.dbContext.Entry(book).Collection(s => s.UserBorrowedBooks).Load();
+
+            return new GetBorrowedAvailableStatusResponse
+            {
+                Status = string.Format(
+                    Constants.GrpcServer.Message.BorrowedAvailableStatus,
+                    book.UserBorrowedBooks.Count,
+                    book.NoOfCopyBooks - book.UserBorrowedBooks.Count)
+            };
         }
 
         public GetUsersBorrowedMostBooksResponse GetUsersWithMostBorrowings(GetUsersBorrowedMostBooksRequest request)
         {
-            if (request.FromDate == null || request.ToDate == null)
-            {
-                return null;
-            }
-
             DateTime fromDate = request.FromDate.ToDateTime();
             DateTime toDate = request.ToDate.ToDateTime();
 
@@ -87,17 +104,12 @@ namespace RebtelTest.Service.Helpers
 
         public Books GetUserBorrowedBooks(GetUserBorrowedBooksRequest request)
         {
-            if (request.FromDate == null || request.ToDate == null)
-            {
-                return null;
-            }
-
             User user = this.dbContext.Users
                 .Find(request.UserId);
 
             if (user == null)
             {
-                return null;
+                throw new UserNotFoundException(string.Format(Constants.GrpcServer.Message.UserNotFoundErrorMessage, request.UserId));
             }
 
             DateTime fromDate = request.FromDate.ToDateTime();
@@ -114,9 +126,17 @@ namespace RebtelTest.Service.Helpers
 
         public Books GetPossibleRelatedBooks(int bookId)
         {
-            List<int> userIds = this.dbContext.UserBorrowedBooks
-                .Where(ubb => ubb.BookId == bookId)
-                .Select(ubb => ubb.UserId).Distinct().ToList();
+            Data.Models.Book book = this.dbContext.Books.Find(bookId);
+
+            if (book == null)
+            {
+                throw new BookNotFoundException(string.Format(Constants.GrpcServer.Message.BookNotFoundErrorMessage, bookId));
+            }
+
+            this.dbContext.Entry(book).Collection(s => s.UserBorrowedBooks).Load();
+
+            List<int> userIds = book.UserBorrowedBooks
+                .Select(b => b.UserId).Distinct().ToList();
 
             List<int> bookIds = this.dbContext.UserBorrowedBooks
                 .Where(ubb => userIds.Contains(ubb.UserId) && ubb.BookId != bookId)
@@ -132,7 +152,7 @@ namespace RebtelTest.Service.Helpers
 
             if (book == null)
             {
-                throw new ArgumentException($"The book cannot be found for the book id: {bookId}");
+                throw new BookNotFoundException(string.Format(Constants.GrpcServer.Message.BookNotFoundErrorMessage, bookId));
             }
 
             this.dbContext.Entry(book).Collection(s => s.UserBorrowedBooks).Load();
@@ -144,5 +164,7 @@ namespace RebtelTest.Service.Helpers
 
             return new GetReadRateResponse() { Rate = avarage };
         }
+
+        #endregion Methods
     }
 }

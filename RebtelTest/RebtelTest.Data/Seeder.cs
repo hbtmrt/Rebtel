@@ -7,6 +7,9 @@ namespace RebtelTest.Data
 {
     public sealed class Seeder
     {
+        // bookid, keyvaluePair -> NoOfCopies, Borrowed
+        private readonly Dictionary<int, KeyValuePair<int, int>> bookCopyRegistry = new();
+
         internal void Seed(ModelBuilder modelBuilder)
         {
             SeedBooks(modelBuilder);
@@ -30,16 +33,21 @@ namespace RebtelTest.Data
                 int bookId = random.Next(1, 20);
                 int userId = random.Next(1, 20);
 
-                items.Add(new UserBorrowedBook
+                KeyValuePair<int, int> noOfCopiesAndBorrowed = bookCopyRegistry[bookId];
+
+                if (noOfCopiesAndBorrowed.Key != noOfCopiesAndBorrowed.Value)
                 {
-                    Id = i,
-                    BookId = bookId,
-                    UserId = userId,
-                    IsCopy = userId % 2 == 0,
-                    BorrowedDate = new DateTime(2021, random.Next(1, 13), random.Next(1, 28)),
-                    ExpectedReturnDate = DateTime.Today.AddMonths(2),
-                    ReturnDate = userId % 5 == 0 ? new DateTime(2022, random.Next(1, 3), random.Next(1, 27)) : null
-                });
+                    items.Add(new UserBorrowedBook
+                    {
+                        Id = i,
+                        BookId = bookId,
+                        UserId = userId,
+                        IsCopy = userId % 2 == 0,
+                        BorrowedDate = new DateTime(2021, random.Next(1, 13), random.Next(1, 28)),
+                        ExpectedReturnDate = DateTime.Today.AddMonths(2),
+                        ReturnDate = userId % 5 == 0 ? new DateTime(2022, random.Next(1, 3), random.Next(1, 27)) : null
+                    });
+                }
             }
 
             return items;
@@ -53,7 +61,6 @@ namespace RebtelTest.Data
 
         private List<User> GenerateUsers()
         {
-
             List<User> users = new List<User>();
             for (int i = 1; i < 20; i++)
             {
@@ -79,14 +86,16 @@ namespace RebtelTest.Data
             List<Book> books = new List<Book>();
             for (int i = 1; i < 20; i++)
             {
+                int noOfCopies = random.Next(50, 100);
                 books.Add(new Book
                 {
                     Id = i,
                     Name = $"My Book {i}",
-                    NoOfCopyBooks = random.Next(50, 100),
-                    NoOfBorrowedBooks = random.Next(1, 50),
-                    NoPages = random.Next(1,2000)
+                    NoOfCopyBooks = noOfCopies,
+                    NoPages = random.Next(1, 2000)
                 });
+
+                bookCopyRegistry[i] = new KeyValuePair<int, int>(noOfCopies, 0);
             }
 
             return books;

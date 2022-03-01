@@ -13,11 +13,8 @@ namespace RebtelTest.Data.Models
         public string Name { get; set; }
 
         public int NoOfCopyBooks { get; set; }
-        public int NoOfBorrowedBooks { get; set; }
-        public int NoPages { get; set; }
 
-        [NotMapped]
-        public int NoOfAvailableBooks => NoOfCopyBooks - NoOfBorrowedBooks;
+        public int NoPages { get; set; }
 
         public virtual ICollection<UserBorrowedBook> UserBorrowedBooks { get; set; }
 
